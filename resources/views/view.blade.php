@@ -70,10 +70,10 @@
 @section('body')
 <div style="background-color: rgba(0, 0, 0, 0.3);" class="navbar">
     <ul>
-        <li><a href="/server/id/console"><i class="fas fa-terminal"></i>&nbsp;Console</a></li>
-        <li><a href="/server/id/file-manager"><i class="fas fa-folder"></i>&nbsp;File Manager</a></li>
-        <li><a href="/server/startup"><i class="fas fa-play"></i>&nbsp;Startup</a></li>
-        <li><a href="/server/id/network"><i class="fas fa-network-wired"></i>&nbsp;Network</a></li>
+        <li><a href="/servers/view/{{ $server->id }}"><i class="fas fa-terminal"></i>&nbsp;Console</a></li>
+        <li><a href="/servers/file-manager/{{ $server->id }}"><i class="fas fa-folder"></i>&nbsp;File Manager</a></li>
+        <li><a href="/servers/startup/{{ $server->id }}"><i class="fas fa-play"></i>&nbsp;Startup</a></li>
+        <li><a href="/servers/network/{{ $server->id }}"><i class="fas fa-network-wired"></i>&nbsp;Network</a></li>
     </ul>
 </div>
 
