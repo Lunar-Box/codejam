@@ -77,9 +77,10 @@
     <div style="display: show;" id="main" class="border-rad contain">
     <h1 class="center">Startup</h1>
     <div class="form center">
-        <form method="POST" action="/server/startup">
+        <form method="POST" action="/servers/startup/{{ $server->id }}">
             <label for="startup_cmd">Startup:&nbsp;</label>
             <input class="startup_cmd" type="text" id="startup_cmd" name="startup_cmd" value="{{ $server->startup ?? '' }}" placeholder="python3 --version"><br>
+            @csrf
             <input class="submit" type="submit" value="Apply">
         </form>
     </div>

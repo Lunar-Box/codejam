@@ -8,9 +8,19 @@ use App\Servers;
 
 class ApplicationController extends Controller
 {
-    public function start($id) {
-        $res = Http::post('http://127.0.0.1:5000/start');
+
+    public function startup(Request $res, $id) {
         $server = Servers::findOrFail($id);
+
+        $server->startup = $res->startup_cmd;
+        $server->save();
+
+        return redirect('/servers/startup/'.$id);
+    }
+
+    public function start($id) {
+        $server = Servers::findOrFail($id);
+        $res = Http::post('http://127.0.0.1:5000/start/'.$server->uuid.'/'.$server->startup);
 
         return view('view')->with([
             'log' => $res->json()['data'],
@@ -19,7 +29,7 @@ class ApplicationController extends Controller
     }
 
     public function restart() {
-        $res = Http::post('http://127.0.0.1:5000/restart');
+        $res = Http::post('http://127.0.0.1:5000/restart/'.$server->uuid);
 
         return view('view')->with([
             'log' => $res->json()['data'],
@@ -27,7 +37,7 @@ class ApplicationController extends Controller
     }
 
     public function stop() {
-        $res = Http::post('http://127.0.0.1:5000/stop');
+        $res = Http::post('http://127.0.0.1:5000/stop/'.$server->uuid);
 
         return view('view')->with([
             'log' => $res->json()['data'],
@@ -35,7 +45,7 @@ class ApplicationController extends Controller
     }
 
     public function kill() {
-        $res = Http::post('http://127.0.0.1:5000/kill');
+        $res = Http::post('http://127.0.0.1:5000/kill/'.$server->uuid);
 
         return view('view')->with([
             'log' => $res->json()['data'],

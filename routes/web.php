@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/servers', 'ConsoleController@get_servers');
 
     Route::get('/servers/startup/{id}', 'IndexController@startup');
-    Route::post('/server/startup', 'ApplicationController@startup');
+    Route::post('/servers/startup/{id}', 'ApplicationController@startup');
     
     Route::get('/servers/file-manager/{id}', 'ConsoleController@file_manager');
     Route::post('/servers/file-manager/{id}', 'ConsoleController@file_upload');
@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/servers/view/{id}', 'ViewController@index')->name('console');
 
     Route::get('/servers/start/{id}', 'ApplicationController@start');
-    Route::get('/server/restart', 'ApplicationController@restart');
-    Route::get('/server/stop', 'ApplicationController@stop');
-    Route::get('/server/kill', 'ApplicationController@kill');
+    Route::get('/servers/restart{id}', 'ApplicationController@restart');
+    Route::get('/servers/stop{id}', 'ApplicationController@stop');
+    Route::get('/servers/kill{id}', 'ApplicationController@kill');
 });

@@ -24,28 +24,28 @@ class create(Resource):
 api.add_resource(create, "/create/<string:lang>")
 
 class start(Resource):
-    def post(self):
-        ret = func.start("946d8c9113")
+    def post(self, uuid, startup):
+        ret = func.start(uuid, startup)
         return {"data": ret}
-api.add_resource(start, "/start")
+api.add_resource(start, "/start/<string:uuid>/<string:startup>")
 
 class restart(Resource):
-    def post(self):
-        ret = func.restart("0c410cfcc9")
+    def post(self, uuid):
+        ret = func.restart(uuid)
         return {"data": ret}
-api.add_resource(restart, "/restart")
+api.add_resource(restart, "/restart/<string:uuid>")
 
 class stop(Resource):
-    def post(self):
-        ret = func.stop("0c410cfcc9")
+    def post(self, uuid):
+        ret = func.stop(uuid)
         return {"data": ret}
-api.add_resource(stop, "/stop")
+api.add_resource(stop, "/stop/<string:uuid>")
 
 class kill(Resource):
-    def post(self):
-        ret = func.kill("0c410cfcc9")
+    def post(self, uuid):
+        ret = func.kill(uuid)
         return {"data": ret}
-api.add_resource(kill, "/kill")
+api.add_resource(kill, "/kill/<string:uuid>")
 
 
 if __name__ == "__main__":

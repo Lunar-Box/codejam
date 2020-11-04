@@ -13,8 +13,8 @@ class ConsoleController extends Controller
     public function deploy(Request $res) {
         $user = Auth::user();
         $servers = Servers::all()->where('owner_id', $user->id);
-        if($servers == null) {
-            print($servers);
+        if($servers != "[]") {
+            print("you already have a server!");
             return view('index');
         }
         $req = Http::post('http://127.0.0.1:5000/create/'.$res->lang);
@@ -47,12 +47,12 @@ class ConsoleController extends Controller
         $storage = Storage::disk('containers');
 
         $files = $storage->files($path);
-        // $directories = $storage->allDirectories($path);
+        $directories = $storage->directories($path);
 
         return view('file-manager')->with([
             'server' => $server,
             'files' => $files,
-            // 'directories' => $directories,
+            'directories' => $directories,
         ]);
     }
     

@@ -8,10 +8,10 @@ except Exception as e:
 import requests
 
 
-def start(id):
+def start(id, startup):
     container = client.containers.get(id)
     container.start()
-    output = container.exec_run("cat /proc/meminfo", tty=True, user="server", workdir="/home/server")
+    output = container.exec_run(startup, tty=True, user="server", workdir="/home/server")
     out1 = output.output.decode('utf-8').replace("\n", "<br>")
     out2 = out1.replace("\r", "")
     return f"{out2}<br>EXITED({output.exit_code})"
