@@ -25,7 +25,7 @@
 
 
 ## What still needs done
-- [] Lots of things
+- [ ] Lots of things
 
 
 # Screenshots
