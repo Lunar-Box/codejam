@@ -2,9 +2,9 @@
 ### Lunar Box is an open-source Docker container management tool that allows students to freely edit, run, and host their code or project. The tool is open source and can run on a personal server, but anyone can freely access and utilize it at https://lunarbox.net/
 
 ## Links
-### [Discord]()
+### [Discord](https://discord.gg/UCrwUaJ)
 ### [Website](https://lunarbox.net/)
-### [HostSapling Discord (the amazing place it's hosted at)]()
+### [HostSapling Discord (the amazing place it's hosted at)](https://discord.gg/tvPkE6G)
 ### [HostSapling Website](https://hostsapling.net/)
 ### [Personal Website](https://infoupgraders.com/)
 
