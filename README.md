@@ -19,7 +19,7 @@
 
 # Screenshots
 <p align="center">
-    <img width="512px" alt="Main Page" src="https://cdn.discordapp.com/attachments/771419285092171878/773571831902240768/unknown.png">
+    <img width="256px" alt="Main Page" src="https://cdn.discordapp.com/attachments/771419285092171878/773571831902240768/unknown.png">
 </p>
 <p align="center">
     <img width="512px" alt="Servers Page" src="https://cdn.discordapp.com/attachments/771419285092171878/773571964869935145/unknown.png">
