@@ -19,16 +19,23 @@
 ### **NOT FOR PRODUCTION USE, APPLICATION IS STILL NOT FULLY RELEASED AND MAY HAVE MANY SECURITY BUGS!**
 
 ### Coming Soon
+```sh
+[-] Ubuntu 18.04
+```
+
+
+## What still needs done
+- [] Lots of things
 
 
 # Screenshots
-<p align="center">
+<p align="left">
     <img width="512px" alt="Main Page" src="https://cdn.discordapp.com/attachments/771419285092171878/773571831902240768/unknown.png">
 </p>
-<p align="center">
+<p align="left">
     <img width="512px" alt="Servers Page" src="https://cdn.discordapp.com/attachments/771419285092171878/773571964869935145/unknown.png">
 </p>
-<p align="center">
+<p align="left">
     <img width="512px" alt="Console Page" src="https://cdn.discordapp.com/attachments/771419285092171878/773572089465536512/unknown.png">
 </p>
 
