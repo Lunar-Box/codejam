@@ -26,15 +26,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->group(function() {
 
     Route::get('/deploy', 'IndexController@deploy');
+    Route::post('/deploy', 'ConsoleController@deploy');
 
     Route::get('/servers', 'ConsoleController@get_servers');
 
-    Route::get('/server/startup', 'IndexController@startup');
+    Route::get('/servers/startup/{id}', 'IndexController@startup');
     Route::post('/server/startup', 'ApplicationController@startup');
+    
+    Route::get('/servers/file-manager/{id}', 'ConsoleController@file_manager');
+    Route::post('/servers/file-manager/{id}', 'ConsoleController@file_upload');
 
     Route::get('/servers/view/{id}', 'ViewController@index')->name('console');
 
-    Route::get('/server/start', 'ApplicationController@start');
+    Route::get('/servers/start/{id}', 'ApplicationController@start');
     Route::get('/server/restart', 'ApplicationController@restart');
     Route::get('/server/stop', 'ApplicationController@stop');
     Route::get('/server/kill', 'ApplicationController@kill');

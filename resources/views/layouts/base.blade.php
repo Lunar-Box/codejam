@@ -25,7 +25,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #33404D;
+            background-color: #334352;
             font-family: 'Montserrat', sans-serif;
             height: calc(100% + 250px) !important;
         }

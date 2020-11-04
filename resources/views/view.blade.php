@@ -85,7 +85,7 @@
         <p class="console-text">{!! $log ?? 'EXITED (0)' !!}</p>
     </div>
     <div class="border-rad-btm server-console-control">
-        <p class="console-btn"><a href="/server/start">Start</a></p>
+        <p class="console-btn"><a href="/servers/start/{{ $server->id }}">Start</a></p>
         <p class="console-btn"><a href="/server/restart">Restart</a></p>
         <p class="console-btn"><a href="/server/stop">Stop</a></p>
         <p class="console-btn"><a href="/server/kill">Kill</a></p>

@@ -11,12 +11,15 @@ class IndexController extends Controller
         return view('index');
     }
 
-    public function startup() {
-        return view('startup');
+    public function startup($id) {
+        $server = Servers::findOrFail($id);
+        return view('startup')->with([
+            'server' => $server,
+        ]);
     }
 
     public function deploy() {
-        return view('index');
+        return view('deploy');
     }
 
     public function create(Request $request) {

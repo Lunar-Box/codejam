@@ -48,6 +48,12 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'containers' => [
+            'driver' => 'local',
+            'root' => '/var/lib/docker/containers',
+            'visibility' => 'private',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
